@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Proyecto con JavaScript</title>
+
+    <!--Estilos CSS-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link id ="theme" rel="stylesheet" type="text/css" href="css/green.css" />
+
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+        <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+    <!--Pluging Validacion -validator de formulariosjQuery- Vamos a añadir la libreria desde el cdn remoto- No trae https: hay q añadirlo para q corra-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js" > </script> 
+
+    <!--Mis Scripts-->
+   <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
+    </div>
+
+    <section id="global">
+
+        <!--Cabecera-->
+
+        <header>
+            <div id="logo">
+                <h1>Proyecto JS</h1>
+            </div>
+
+            <div class="clearfix"></div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="reloj.html">Reloj</a></li>
+                    <li><a href="about.html">Sobre mi</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Fin de la cabecera-->
+
+        <!--Contenido-->
+
+        <section id="content">
+
+            <div id="box"> 
+
+                 <!--Cargar formulario de contacto data-validation="date", alfanumerico lo agregamos a medida que vamos codificando, la sintaaxis esta en la web-formvalidatorjQuery-->
+
+                 <h2>contacto</h2>
+                 <form action="" method="POST" id="form_contact">
+                     <label for="name">Nombre</label>
+                     <input type="text" name="name" data-validation ="alfanumérico" />
+
+                     <label for="surname">Apellidos</label>
+                     <input type="text" name="surname" data-validation ="alfanumérico" />
+
+                     <label>Email</label>
+                     <input type="email" name="email" data-validation ="email" />
+
+                     <label for="sex">Sexo</label>
+                     <select name="sex" data-validation ="required">
+                         <option value="men">Hombre</option>
+                         <option value="woman">Mujer</option>
+                     </select>
+
+                     <label for="date">Fecha de Nacimiento</label>
+                     <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy" />
+
+                     <label for="years">Edad</label>
+                     <input type="number" name="years" data-validation="number" />
+
+                     <input type="submit" name="enviar" />
+
+<!--Es totalmente necesario ejecutar el metodo que lance el pluging para que asi lo valide -->
+                 </form>
+                 
+            </div>
+
+            <aside id="sidebar">
+                <div id="about">
+                    <span>
+                        <h4>Quien soy?</h4>
+                    </span>
+                    <img src="img/caracol.jpg" />
+                    <p>Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página al mirar su diseño.</p>
+                </div>
+
+                <div id="login">
+                    <span>
+                        <h4>Identificate</h4>
+                        <form>
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="form_name" />
+
+                            <label for="email">Correo</label>
+                            <input type="text" name="email"  />
+
+                            <label for="name">Contraseña</label>
+                            <input type="password" name="password"  />
+
+                            <input type="submit" value="Entrar" />
+
+                        </form>
+                    </span>
+                </div>
+                
+            </aside>
+
+            <div class="clearfix"></div>
+            
+        </section>
+    </section>
+    <footer>
+        Master de JavaScript de Victor Robles &copy;
+
+        <a href="#" class="subir">Ir arriba</a>
+    </footer>
+
+</body>
+</html>
+
+
+
